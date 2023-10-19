@@ -7,8 +7,6 @@ tensorflow == 1.15.0
 # Installation
 ```
 git clone https://github.com/LPH-BIG/scGraph2Vec
-cd scGraph2Vec
-python setup.py install
 ```
 
 # Run Experiments
