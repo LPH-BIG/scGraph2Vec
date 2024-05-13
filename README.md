@@ -8,9 +8,8 @@ python == 3.7
 tensorflow == 1.15.0
 
 # Installation
-Requirements: networkx, numpy, python-louvain, scikit-learn, scipy, tensorflow (1.15).
 ```
-conda create -n scgraph2vec=3.7
+conda create -n scgraph2vec python=3.7
 source activate scgraph2vec
 git clone https://github.com/LPH-BIG/scGraph2Vec
 ```
@@ -24,23 +23,23 @@ python3.7 train3d.py --dataset=brain_lake --features=True --output=./test --task
 ```
 # Parameter Explanation
 The core function of the scGraph2Vec method provided in train3d.py, and the detailed structure of the model has been given in the model.py.
-## Parameters related to the input data
+### Parameters related to the input data
   - features: whether to include node features
   - output: output directory
   - model: model to train, among: gcn_ae, gcn_vae, gcn_vae3d
-## General parameters associated with GAE/VGAE
+### General parameters associated with GAE/VGAE
   - dropout: 0., dropout rate
   - iterations: 200, number of iterations in training
   - learning_rate: 0.01, initial learning rate (Adam)
   - hidden2: 256, dimension of the first GCN hidden layer
   - hidden: 64, dimension of the second GCN hidden layer
   - dimension: 16, dimension of the output layer, i.e., dimension of the embedding space
-## Additional parameters, specific to modularity calculation
+### Additional parameters, specific to modularity calculation
   - beta: 0.0, beta hyperparameter
   - lamb: 0.0, Lambda hyperparameter
   - gamma: 1.0, Gamma hyperparameter
   - s_reg: 2, s hyperparameter
-## Parameters related to the experimental setup
+### Parameters related to the experimental setup
   - task: task_2', 'task_1: pure community detection; task_2: joint link prediction and community detection
   - nb_run: 1, number of model run + test
   - prop_val: 5., proportion of edges in validation set for the link prediction task
