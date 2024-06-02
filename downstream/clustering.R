@@ -6,7 +6,7 @@ library(dplyr)
 library(cluster)
 library(factoextra)
 
-final_data=fread("brain_geneembedding.txt")
+final_data=fread("brain_embedding.txt")
 set.seed(321)
 tsne_out = Rtsne(
       unique(final_data[,c(1:16)]),
