@@ -1,0 +1,3 @@
+python -W ignore /scGNN-master/PreprocessingscGNN.py --datasetName Adult-Brain_Lake_dge.csv --datasetDir /scGNN/test/brain/ --LTMGDir /scGNN/test/brain/ --filetype CSV --geneSelectnum 27068
+
+python -W ignore /scGNN-master/scGNN.py --datasetName preprocess --datasetDir ./  --outputDir epoch400_lr01/ --EM-iteration 2 --Regu-epochs 50 --EM-epochs 20  --GAEhidden1 64 --GAElr 0.01 --GAEepochs 400 --quickmode --nonsparseMode
